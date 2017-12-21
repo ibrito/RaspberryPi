@@ -2,7 +2,14 @@
 Scripts para control de LEDs con Raspberry Pi B+ y Python
 
 ## Montaje
-Los scripts usados para las pruebas usan como configuracion de la Raspberry Pi B+  el sigiente espema, tambien dejo la configuracion en la protoboard 
+Los scripts usados para las pruebas usan como configuracion de la Raspberry Pi B+  el sigiente espema, tambien dejo la configuracion en la protoboard,
+el Sistema Operativo ([Raspbian](https://www.raspberrypi.org/downloads/raspbian/)) :
+
+*	Raspbian Stretch with desktop
+*	Image with desktop based on Debian Stretch
+*	Version: November 2017
+*	Release date: 2017-11-29
+*	Kernel version: 4.9
 
 ### Esquema 
  ![Esquema Raspberry Pi B+ ](https://github.com/ibrito/RaspberryPi/blob/master/LEDs/rpi_B_LEDs_esquema.png "Esquema rspberry Pi b+ ")

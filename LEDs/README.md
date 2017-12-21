@@ -189,6 +189,7 @@ La funcion ciclosAlternos() se invoca de esta forma, los valores de cCiclos=0 y 
 	.
 	.
 	.
+listaGPIO = [16,17]
 cCiclos	  = 0               # variable para manejar el contador de ciclos de ejecucion
 cCiclosMax = 5				# variable para manejar la cantidad  los ciclos de ejecucion
 #--- Definicion de funciones

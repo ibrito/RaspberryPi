@@ -154,7 +154,7 @@ def alternos(lista):			# Funcions para encender de forma alterna dos leds
     L.output(lista[0],L.LOW)
     L.output(lista[1],L.HIGH)
 ```
-
+Para estos ejemplos listaGPIO se comporta como un Array[] de los que ya conocemos, es por esto que lista[0] contiene el valor '16' y lista[1] contiene el valor '17' 
 
 
 

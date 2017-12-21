@@ -192,3 +192,5 @@ def ciclosAlternos(lista, cCiclos,cCiclosMax):       # Funcions para encender de
 
 
 
+
+

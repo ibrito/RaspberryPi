@@ -231,8 +231,67 @@ def serieUnoLed(lista,cT=0.1):
 
 ```
  
+_________________________________________________________________________
 
+## ledsOn_secuenciasInv.py
+#### Uso
+La ejecución de este script encendera los LEDs numero 1,2,3,4,5,6  conectado a la GPIO 16,17,22,23,24,25 respectivamente  de forma secuencial y hace un juego de luces con la ejecucion de la funcion  serieUnoLed()
+```py
+ sudo python ledsOn_secuenciasInv.py
 
+```
+
+aca estan las dos fucniones de realizar el efecto de movimiento en los LEDs
+```py
+def serieUnoLed(lista,cT=0.1): # Enciende un Led a la vez
+    
+    pX=0
+    for pin in lista:
+        if (pX == 0):
+            L.output(lista[pX],L.HIGH)
+            print "0 -I: " + str(pX) + " pin: " + str(pin) + " pinA: " + str(cPines)
+            pX +=1
+            
+        else:
+            L.output(lista[pX-1],L.LOW)
+            L.output(pin,L.HIGH)
+            print "I:" + str(pX) + " pin: " + str(pin) + " pinA: " + str(lista[pX-1])
+            pX +=1
+        time.sleep(cT)
+
+def serieUnoLedInv(lista,cT=0.1):  # Enciende un Led a la vez Invertido 
+    
+    pX=0
+    for pin in lista:
+        if (pX == 0):
+            L.output(lista[cPines-(pX+1)],L.HIGH)
+            #print "0 -I: " + str(pX) + " pin: " + str(pin) + " pinA: " + str(lista[cPines-1])
+            pX +=2
+        else:
+            #L.output(lista[cPines-(pX-1)],L.LOW)
+            L.output(lista[cPines-pX],L.HIGH)
+            #print "I:" + str(pX) + " pin: " + str(pin) + " pinA: " + str(lista[cPines-pX])
+            pX +=1
+        time.sleep(cT)
+```
+
+El llamado a estas funciones estan en el bloque de ejecucion
+```py
+#--- Ejecucion
+
+iniGPIO(listaGPIO)
+
+offTodo(listaGPIO)                               # se configuran todas las salidas definidas en listaGPIO
+
+serieUnoLed(listaGPIO,cT)                       # se invoca la funcion que enciende de forma secuencial
+
+serieUnoLedInv(listaGPIO,cT)                    # se invoca la funcion que enciende de forma secuencial Inv
+
+time.sleep(2)                                   # detiene la ejecución por 2 segundos
+
+L.cleanup()   
+
+```
 
 
 

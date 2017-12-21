@@ -170,7 +170,7 @@ La ejecución de este script encendera los LEDs numero 1,2  conectado a la GPIO 
 Podemos ver que la funcion ciclosAlternos(lista, cCiclos,cCiclosMax) contiene un ciclo while el cual tiene un valor de ejecuacón entre cCiclos y cCiclosMax, estas  variables es donde se maneja la cantidad de veces que se repetira el ciclo, tambien muestra por pantalla el estado de las variables en cada ciclo
 
 ```py
-def ciclosAlternos(lista, cCiclos,cCiclosMax):       # Funcions para encender de forma alterna dos leds con un ciclo
+def ciclosAlternos(lista, cCiclos,cCiclosMax): # Funcions para encender de forma alterna dos leds con un ciclo
     while cCiclos < cCiclosMax:
         L.output(lista[0],L.HIGH)
         L.output(lista[1],L.LOW)
@@ -182,6 +182,25 @@ def ciclosAlternos(lista, cCiclos,cCiclosMax):       # Funcions para encender de
         print "Ciclos Totales:" + str(cCiclosMax) + " ciclo Actual: " + str(cCiclos)        
 
 ```
+
+La funcion ciclosAlternos() se invoca de esta forma, los valores de cCiclos=0 y cCiclosMas=5:
+
+```py
+	.
+	.
+	.
+cCiclos	  = 0               # variable para manejar el contador de ciclos de ejecucion
+cCiclosMax = 5				# variable para manejar la cantidad  los ciclos de ejecucion
+#--- Definicion de funciones
+	.
+	.
+	.
+#--- Ejecucion
+ciclosAlternos(listaGPIO,cCiclos,cCiclosMax)
+```
+
+
+ 
 
 
 

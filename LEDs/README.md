@@ -31,13 +31,12 @@ La ejecución de este script encendera el LED numero 1  conectado a la GPIO 16 d
 En el script podremos ver tres partes, donde están la importaciones de las librerias RPi.GPIO y time conjuntamente con la definicón de varibles.
 
 ```py
-
 import RPi.GPIO as L  
 import time
 L.setmode(L.BCM)                # inicializar la placa en modo BCM
 L.setwarnings(False)            # se apagan las advertencias
 
-listaGPIO = [16]
+listaGPIO = [16]                # aca se cargaran la GPIO que se quieren controlar 
 
 ```
 

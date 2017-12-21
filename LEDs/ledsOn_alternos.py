@@ -49,6 +49,8 @@ def alternos(lista):			# Funcions para encender de forma alterna dos leds
 
 iniGPIO(listaGPIO)              # se configuran todas las salidas definidas en listaGPIO
 
+offTodo(listaGPIO)
+
 alternos(listaGPIO)             # se invoca la funcion que enciende de forma alterna los leds
 
 time.sleep(2)                   # detiene la ejecución por 2 segundos

@@ -34,6 +34,8 @@ def onTodo(lista):              # funcion para encender o poner en 1 todas las G
 
 iniGPIO(listaGPIO)              # se configuran todas las salidas definidas en listaGPIO
 
+offTodo(listaGPIO)
+
 onTodo(listaGPIO)               # se le envia la orden de poner en 1 todas las salidas de la listaGPIO
 
 time.sleep(2)                   # detiene la ejecución por 2 segundos

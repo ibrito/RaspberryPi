@@ -48,8 +48,10 @@ def ciclosAlternos(lista, cCiclos,cCiclosMax):       # Funcions para encender de
 
 iniGPIO(listaGPIO)                              # se configuran todas las salidas definidas en listaGPIO
 
+offTodo(listaGPIO)
+
 ciclosAlternos(listaGPIO,cCiclos,cCiclosMax)    # se invoca la funcion que enciende de forma alterna los leds
 
 time.sleep(2)                                   # detiene la ejecución por 2 segundos
 
-L.cleanup()   
+L.cleanup()                                     # Limpia los canales que se usaron el listaGPIO

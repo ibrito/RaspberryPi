@@ -18,7 +18,6 @@ el Sistema Operativo ([Raspbian](https://www.raspberrypi.org/downloads/raspbian/
 ![Protoboard Raspberry Pi B+ ](https://github.com/ibrito/RaspberryPi/blob/master/LEDs/rpi_B_LEDs_protoboard.png "Protoboard rspberry Pi b+ ")
 
 ## ledsOn_1.py
-
 #### Uso
 
 La ejecución de este script encendera el LED numero 1  conectado a la GPIO 16 de la raspberry Pi B+
@@ -80,6 +79,27 @@ time.sleep(2)                   # detiene la ejecución por 2 segundos
 L.cleanup()                     # Limpia los canales que se usaron el listaGPIO
 
 ```
+_________________________________________________________________________
+
+## ledsOn_3.py
+#### Uso
+La ejecución de este script encendera el LED numero 1,2,3  conectado a la GPIO 16,17,22 respectivamente  de la raspberry Pi B+
+
+```py
+ sudo python ledsOn_3.py
+
+```
+
+
+
+
+
+
+
+
+
+
+
 
 
 

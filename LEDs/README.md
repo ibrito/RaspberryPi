@@ -31,6 +31,7 @@ La ejecución de este script encendera el LED numero 1  conectado a la GPIO 16 d
 En el script podremos ver tres partes, donde están la importaciones de las librerias RPi.GPIO y time conjuntamente con la definicón de varibles, la segunda donde se encuentra definidas las funciones y la ultima donde se llaman estas funciones y se ejecuta el encendido del LED
 
 #### Parte 1:
+
 ```py
 import RPi.GPIO as L  
 import time
@@ -40,6 +41,12 @@ L.setwarnings(False)            # se apagan las advertencias
 listaGPIO = [16]                # aca se cargaran la GPIO que se quieren controlar 
 
 ```
+Por ejemplo si queremos agregar mas de una salida solo deberemos agregar el numero de GPIO que queremos usar a la lista (listaGPIO[])
+```py
+listaGPIO = [16,17]	#aca se agrego el GPIO 17 a la lista, ahora se ejecutaran las funciones para estad dos GPIO
+
+```
+
 
 #### Parte 2:
 ```py

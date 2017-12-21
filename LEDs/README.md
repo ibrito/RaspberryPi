@@ -21,12 +21,27 @@ el Sistema Operativo ([Raspbian](https://www.raspberrypi.org/downloads/raspbian/
 
 #### Uso
 
-La ejecución de este script encendera el LED nuemro uno conectado a la GPIO 16 de la raspberry Pi B+
+La ejecución de este script encendera el LED numero 1  conectado a la GPIO 16 de la raspberry Pi B+
 
 ```py
  sudo python ledsOn_1.py
 
 ```
+
+En el script podremos ver tres partes, donde están la importaciones de las librerias RPi.GPIO y time conjuntamente con la definicón de varibles.
+
+```py
+
+import RPi.GPIO as L  
+import time
+L.setmode(L.BCM)                # inicializar la placa en modo BCM
+L.setwarnings(False)            # se apagan las advertencias
+
+listaGPIO = [16]
+
+```
+
+
 
 
 

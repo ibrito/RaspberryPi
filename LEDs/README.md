@@ -126,6 +126,34 @@ time.sleep(2)                   # detiene la ejecución por 2 segundos
 L.cleanup()                     # Limpia los canales que se usaron el listaGPIO
 
 ```
+_________________________________________________________________________
+
+## ledsOn_alternos.py
+#### Uso
+La ejecución de este script encendera los LEDs numero 1,2  conectado a la GPIO 16,17 respectivamente  de forma alterna en la raspberry Pi B+
+
+```py
+ sudo python ledsOn_alternos.py
+
+```
+
+En este script se agrego una funcion que de forma simple entercala los valores de encendido y apgado para las GPIO 16 y 17, de igual forma se agrego un variable que almacena el tiempo en que se intercambain los valor.
+```py
+cT	      = 1 				 	# variable para almacenar el tiempo por defecto de 1 segundo
+
+
+#--- Definicion de funciones
+.
+.
+.
+def alternos(lista):			# Funcions para encender de forma alterna dos leds
+
+    L.output(lista[0],L.HIGH)
+    L.output(lista[1],L.LOW)
+    time.sleep(cT)
+    L.output(lista[0],L.LOW)
+    L.output(lista[1],L.HIGH)
+```
 
 
 

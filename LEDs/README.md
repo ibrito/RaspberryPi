@@ -139,13 +139,13 @@ La ejecución de este script encendera los LEDs numero 1,2  conectado a la GPIO 
 
 En este script se agrego una funcion que de forma simple entercala los valores de encendido y apgado para las GPIO 16 y 17, de igual forma se agrego un variable que almacena el tiempo en que se intercambain los valor.
 ```py
-cT	      = 1 				 	# variable para almacenar el tiempo por defecto de 1 segundo
+cT	      = 1 			# variable para almacenar el tiempo por defecto de 1 segundo
 
 
 #--- Definicion de funciones
-.
-.
-.
+	.
+	.
+	.
 def alternos(lista):			# Funcions para encender de forma alterna dos leds
 
     L.output(lista[0],L.HIGH)

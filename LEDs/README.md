@@ -28,8 +28,9 @@ La ejecución de este script encendera el LED numero 1  conectado a la GPIO 16 d
 
 ```
 
-En el script podremos ver tres partes, donde están la importaciones de las librerias RPi.GPIO y time conjuntamente con la definicón de varibles.
+En el script podremos ver tres partes, donde están la importaciones de las librerias RPi.GPIO y time conjuntamente con la definicón de varibles, la segunda donde se encuentra definidas las funciones y la ultima donde se llaman estas funciones y se ejecuta el encendido del LED
 
+#### Parte 1:
 ```py
 import RPi.GPIO as L  
 import time
@@ -40,7 +41,38 @@ listaGPIO = [16]                # aca se cargaran la GPIO que se quieren control
 
 ```
 
+#### Parte 2:
+```py
 
+#--- Definicion de funciones
+def iniGPIO(lista):             # funcion para inicializar las GPIO como salidad listadas en listaGPIO
+    for pin in lista:
+        L.setup(pin,L.OUT)
+
+def offTodo(lista):             # funcion para apagar o poner en 0 todas las GPIO de la listaGPIO
+    for pin in lista:
+        L.output(pin,L.LOW)
+
+def onTodo(lista):              # funcion para encender o poner en 1 todas las GPIO de la listaGPIO
+    for pin in lista:
+        L.output(pin,L.HIGH)
+
+```
+
+#### Parte 3:
+```py
+
+#--- Ejecucion
+
+iniGPIO(listaGPIO)              # se configuran todas las salidas definidas en listaGPIO
+
+onTodo(listaGPIO)               # se le envia la orden de poner en 1 todas las salidas de la listaGPIO
+
+time.sleep(2)                   # detiene la ejecución por 2 segundos
+
+L.cleanup()                     # Limpia los canales que se usaron el listaGPIO
+
+```
 
 
 

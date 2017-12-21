@@ -10,6 +10,16 @@ Los scripts usados para las pruebas usan como configuracion de la Raspberry Pi B
 ### Protoboard
 ![Protoboard Raspberry Pi B+ ](https://github.com/ibrito/RaspberryPi/blob/master/LEDs/rpi_B_LEDs_protoboard.png "Protoboard rspberry Pi b+ ")
 
+## ledsOn_1.py
+
+#### Uso
+
+La ejecución de este script encendera el LED nuemro uno conectado a la GPIO 16 de la raspberry Pi B+
+
+```py
+ sudo python ledsOn_1.py
+
+```
 
 
 

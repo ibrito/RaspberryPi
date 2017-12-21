@@ -200,7 +200,36 @@ cCiclosMax = 5				# variable para manejar la cantidad  los ciclos de ejecucion
 ciclosAlternos(listaGPIO,cCiclos,cCiclosMax)
 ```
 
+_________________________________________________________________________
 
+## ledsOn_secuencias.py
+#### Uso
+La ejecución de este script encendera los LEDs numero 1,2,3,4,5,6  conectado a la GPIO 16,17,22,23,24,25 respectivamente  de forma secuencial
+
+```py
+ sudo python ledsOn_secuencias.py
+
+```
+
+el script ejecuta una funcion que enciende los LEDs de uno a la vez y apaga el estado anterior.
+```py
+def serieUnoLed(lista,cT=0.1):
+    
+    pX=0
+    for pin in lista:
+        if (pX == 0):
+            L.output(lista[pX],L.HIGH)
+            print "0 -I: " + str(pX) + " pin: " + str(pin) + " pinA: " + str(cPines)
+            pX +=1
+            
+        else:
+            L.output(lista[pX-1],L.LOW)
+            L.output(pin,L.HIGH)
+            print "I:" + str(pX) + " pin: " + str(pin) + " pinA: " + str(lista[pX-1])
+            pX +=1
+        time.sleep(cT)
+
+```
  
 
 

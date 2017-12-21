@@ -156,7 +156,32 @@ def alternos(lista):			# Funcions para encender de forma alterna dos leds
 ```
 Para estos ejemplos listaGPIO se comporta como un Array[] de los que ya conocemos, es por esto que lista[0] contiene el valor '16' y lista[1] contiene el valor '17' 
 
+_________________________________________________________________________
 
+## ledsOn_alternosCiclo.py
+#### Uso
+La ejecución de este script encendera los LEDs numero 1,2  conectado a la GPIO 16,17 respectivamente  de forma alterna y por una candiad de ciclo en la raspberry Pi B+
+
+```py
+ sudo python ledsOn_alternosCiclo.py
+
+```
+
+Podemos ver que la funcion ciclosAlternos(lista, cCiclos,cCiclosMax) contiene un ciclo while el cual tiene un valor de ejecuacón entre cCiclos y cCiclosMax, estas  variables es donde se maneja la cantidad de veces que se repetira el ciclo, tambien muestra por pantalla el estado de las variables en cada ciclo
+
+```py
+def ciclosAlternos(lista, cCiclos,cCiclosMax):       # Funcions para encender de forma alterna dos leds con un ciclo
+    while cCiclos < cCiclosMax:
+        L.output(lista[0],L.HIGH)
+        L.output(lista[1],L.LOW)
+        time.sleep(cT)
+        L.output(lista[0],L.LOW)
+        L.output(lista[1],L.HIGH)
+        time.sleep(cT)
+        cCiclos += 1				# incremento en 1 la variable cCiclos
+        print "Ciclos Totales:" + str(cCiclosMax) + " ciclo Actual: " + str(cCiclos)        
+
+```
 
 
 
